@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Guide — Re-Seat</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>User Guide</h1>
+    <p class="tagline">Re-Seat v1.5 — Digital Receipts Manager</p>
+  </div>
+</header>
+
+<div class="page">
+  <div class="container">
+    <div class="card">
+
+      <h1>Getting started</h1>
+      <ol>
+        <li><strong>First launch</strong> asks for your <strong>Name</strong> and an optional <strong>Reference Number</strong>. Your name is appended to reports and exports.</li>
+        <li>The welcome page shows a quick overview of the app. Tap <strong>Get Started</strong> to open the three main tabs: <strong>Receipts</strong>, <strong>Reports</strong> and <strong>Settings</strong>.</li>
+      </ol>
+      <div class="screenshots">
+        <img src="assets/screenshot-welcome.png" alt="Re-Seat welcome screen">
+      </div>
+      <p class="note">You can reopen the welcome page any time from <strong>Settings → About → Show Startup Screen</strong>, and read this guide in-app from <strong>Settings → About → User Guide</strong>.</p>
+
+      <h2>Adding a receipt</h2>
+      <p>Tap <strong>+</strong> on the Receipts tab and fill in:</p>
+      <ul>
+        <li><strong>Merchant</strong> — who you paid</li>
+        <li><strong>Amount</strong> and <strong>Currency</strong></li>
+        <li><strong>Tax</strong> (optional) — VAT or sales tax; the scan can fill it in</li>
+        <li><strong>Category</strong> — Dining, Transport, Lodging, Mileage Allowance, etc.</li>
+        <li><strong>Date</strong></li>
+        <li><strong>Report</strong> — the report this receipt belongs to (optional). The app remembers your last choice.</li>
+        <li><strong>Notes</strong> — anything else</li>
+      </ul>
+
+      <h3>Mileage Allowance</h3>
+      <p>Choose <strong>Category → Mileage Allowance</strong> to log travel:</p>
+      <ol>
+        <li>Enter <strong>From</strong> and <strong>Destination</strong></li>
+        <li>Enter the <strong>Distance</strong> and pick <strong>km</strong> or <strong>miles</strong></li>
+        <li>Enter the <strong>Rate per unit</strong> (e.g. €0.45/mile)</li>
+        <li>The <strong>Total</strong> is calculated automatically</li>
+      </ol>
+      <p>The last-used rate and unit are remembered and prefilled for your next mileage receipt.</p>
+
+      <h3>Photos and files</h3>
+      <ul>
+        <li><strong>Scan with Camera</strong> — Apple's document scanner: point the camera at the receipt and it auto-detects the edges, crops and straightens it automatically.</li>
+        <li><strong>Choose from Library</strong> or <strong>Take Photo</strong> to attach a photo of the paper receipt.</li>
+        <li><strong>Attach PDF or Text File</strong> to add a digital receipt (up to 20 MB).</li>
+        <li>Photos are stored in the database, automatically resized (max 2000 px) to keep the app small and fast. Photos added by older versions are compressed automatically once.</li>
+        <li><strong>Large PDFs</strong>: when you attach a PDF over 400 KB, the app asks whether to <strong>Compress</strong> it (smaller file, but text becomes an image) or <strong>Keep Original</strong>.</li>
+      </ul>
+
+      <h3>Scan a receipt (OCR)</h3>
+      <ol>
+        <li>Attach or take a photo.</li>
+        <li>Tap <strong>Scan Receipt</strong>.</li>
+        <li>The app reads the photo <strong>on your device</strong> and fills in the <strong>merchant, amount, tax, currency and date</strong> — plus the merchant's phone number in Notes, if one is printed.</li>
+        <li>Check the filled values and tap <strong>Save</strong>.</li>
+      </ol>
+      <p>Scanning never sends anything to a server. It only fills fields you left empty, and everything stays editable.</p>
+
+      <h2>Viewing receipts</h2>
+      <p>Tap any receipt to see:</p>
+      <ol>
+        <li><strong>Details</strong> — merchant, date, category, amount, tax, report</li>
+        <li><strong>Notes</strong></li>
+        <li><strong>Receipt File</strong> — attached PDF or text file, shown inline (tap to open full screen)</li>
+        <li><strong>Photo</strong> — tap to zoom (pinch and pan, double-tap to reset)</li>
+      </ol>
+      <div class="screenshots">
+        <img src="assets/screenshot-receipts.png" alt="Re-Seat receipts list">
+        <img src="assets/screenshot-third.png" alt="Re-Seat receipt details">
+      </div>
+      <p>In the list:</p>
+      <ul>
+        <li>A red <strong>PDF</strong> badge or blue <strong>TXT</strong> badge marks receipts with attached files</li>
+        <li>Mileage receipts show their <strong>From → Destination</strong> on the thumbnail</li>
+        <li>The <strong>Filter</strong> button at the top lets you show all reports, one report, or unassigned receipts</li>
+        <li>A <strong>running total</strong> for the current filter is shown at the bottom</li>
+      </ul>
+
+      <h2>Reports</h2>
+      <ul>
+        <li>On the Reports tab, tap <strong>+</strong> to create a report (name, optional date range, notes).</li>
+        <li>Assign receipts to a report when adding or editing them.</li>
+        <li>A report shows its total, a per-category breakdown, and its receipts, together with your <strong>Name</strong> and <strong>Reference Number</strong>.</li>
+        <li><strong>Export CSV</strong> — the report as a spreadsheet (your name and reference are included at the top).</li>
+        <li><strong>Export ZIP</strong> — the CSV plus every attached PDF/text file and photo in the report.</li>
+        <li>Export and backup filenames include your name.</li>
+      </ul>
+
+      <h2>Currencies &amp; exchange rates</h2>
+      <ul>
+        <li><strong>Base Currency</strong> is what all totals are converted into.</li>
+        <li>Tap a rate and type a new number, then tap the green <strong>✓</strong> to save.</li>
+        <li>Tap a currency name to rename it, or add new currencies with <strong>Add Currency</strong>.</li>
+      </ul>
+
+      <h2>Backup &amp; restore</h2>
+      <ul>
+        <li><strong>Backup Database</strong> — saves everything (receipts, photos, files) to a single <code>.zip</code> file you can keep in Files, iCloud or send by email.</li>
+        <li><strong>Restore from Backup…</strong> — replaces the current data with a backup file. Type <code>RESTORE</code> to confirm.</li>
+        <li><strong>Reset Database</strong> — replaces everything with the bundled demo data (type <code>RESET</code>).</li>
+        <li><strong>Delete All Data…</strong> — permanently erases the whole database and restarts the app fresh. The app recommends creating a backup first, and you must type <code>DELETE</code> to confirm.</li>
+      </ul>
+
+      <h2>Deleting safely</h2>
+      <ul>
+        <li><strong>Receipts</strong>: swipe left → Delete → confirm. You can tap <strong>Undo</strong> for a few seconds afterwards.</li>
+        <li><strong>Reports</strong>: delete a report only (receipts are kept, unassigned), or delete the report <strong>and</strong> its receipts. You must type the report name — and for the second option also "I Agree" — before the button enables.</li>
+      </ul>
+
+      <h2>Privacy</h2>
+      <ul>
+        <li>All data (receipts, photos, PDFs, text files, your name) lives in <strong>one SQLite database on your iPhone</strong>.</li>
+        <li>OCR scanning uses Apple's on-device text recognition — <strong>no network, no accounts, no tracking</strong>.</li>
+        <li>Your backup file is yours; the app never uploads anything.</li>
+      </ul>
+
+      <p>&copy; Re-Seat v1.5</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Re-Seat &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a></p>
+  </div>
+</footer>
+</body>
+</html>
