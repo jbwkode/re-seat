@@ -1,6 +1,6 @@
-# Re-Seat Website — GitHub Hosting Guide
+# Receipt Bench Website — GitHub Hosting Guide
 
-This folder contains a simple static website for the Re-Seat app.
+This folder contains a simple static website for the Receipt Bench app.
 Host it free with **GitHub Pages**.
 
 ## 1. Create a GitHub repository
@@ -11,7 +11,7 @@ Sign in at https://github.com and create a new repository, e.g. `re-seat` (publi
 cd website
 git init
 git add .
-git commit -m "Re-Seat website"
+git commit -m "Receipt Bench website"
 git branch -M main
 git remote add origin https://github.com/<your-username>/re-seat.git
 git push -u origin main
